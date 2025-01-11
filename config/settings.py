@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n=)n9q1m17kqxqjjfd6q4_=f+me$)^v&xmgijux_&or)@u4if^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'www.beasthub.onrender.com', 'beasthub.onrender.com']
 
