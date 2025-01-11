@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n=)n9q1m17kqxqjjfd6q4_=f+me$)^v&xmgijux_&or)@u4if^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'www.beasthub.onrender.com', 'beasthub.onrender.com']
 
 
 # Application definition
@@ -130,7 +130,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # CSRF settings
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
-    'http://127.0.0.1:8000',
+    'https://beasthub.onrender.com',
     # Add other trusted origins if needed
 ]
 
