@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/beast-logo.png' %}" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('{% static 'images/background.png' %}') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .header-logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .header-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #000;
+            width: 100%;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-top: auto;
+            border-top-left-radius: 50% 20px;
+            border-top-right-radius: 50% 20px;
+        }
+
+        footer img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/image002.png' %}" alt="Beast Games Logo">
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p>Sorry, the page you are looking for does not exist.</p>
+        <p><a href="{% url 'home' %}">Go back to Home</a></p>
+    </div>
+
+    <footer>
+        <img src="{% static 'images/beast-logo.png' %}" alt="Beast Logo">
+        <div>
+            <p> Beast Games from MrBeast®</p>
+            <div>
+                <a href="{% url 'data_protection_policy' %}">Data Protection Policy</a>
+                <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                <a href="{% url 'cookie_policy' %}">Cookie Policy</a>
+                <a href="{% url 'participant_privacy_notice' %}">MrBeast Privacy Policy</a>
+            </div>
+            <p>© 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
